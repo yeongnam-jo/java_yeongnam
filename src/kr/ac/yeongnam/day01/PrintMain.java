@@ -42,7 +42,7 @@ public class PrintMain {
 		
 		
 
-		System.out.println("==================");
+		System.out.println("======정렬============");
 
 		
 		/*
