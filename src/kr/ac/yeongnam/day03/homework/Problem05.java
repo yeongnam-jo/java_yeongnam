@@ -20,6 +20,28 @@ public class Problem05 {
 
 	public static void main(String[] args) {
 
+		
+		
+		/* 답안2
+		int snail = 0, hour = 0;
+		while((snail += 5) < 100) {
+			snail += (snail < 50 ? -1 : 2);
+			System.out.println("[" + ++hour + "시간 후]" + "달팽이가 올라간 총 높이 : " + snail + "M");
+			
+		}
+		*/
+		
+		/* 답안1
+		int snail = 0, hour = 0;
+		while(snail < 100) {
+			snail += 5;
+			snail += (snail <50 ? -1 : 2);
+			System.out.println("[" + ++hour + "시간 후]" + "달팽이가 올라간 총 높이 : " + snail + "M");
+		}
+		*/
+		
+		/*		
+		 * 내 답안
 		int snailDepth = -100; // 달팽이의 높이를 나타내는 변수
 		int hours = 1; // 경과 시간을 나타내기 위한 변수
 		
@@ -32,6 +54,8 @@ public class Problem05 {
 				snailDepth -= 2;				
 			}
 			System.out.printf("[%d시간 후] 달팽이가 올라간 총 높이 : %dM\n", hours, 100 + snailDepth);
-		}		
+		}
+		
+		*/
 	}
 }

@@ -18,6 +18,25 @@ package kr.ac.yeongnam.day03.homework;
 public class Problem12 {
 
 	public static void main(String[] args) {
+		// 교수님 답안
+		
+		int star =1;
+		for(int i = 1; i <= 9; i++) {
+			//System.out.println("star"+star);
+			for(int j = 1; j <= 9; j++) {
+				if(j <= star || j >= 10-star) {
+					System.out.print("*");
+				} else {
+					System.out.print("-");
+				}
+			}
+			System.out.println();
+			star += (i < 5 ? 1 : -1);
+		}
+		
+		
+		/* 
+		 * 내 답안
 		for(int i = 1; i <= 5; i++) { // 1행부터 5행까지 반복
 			for(int j = 1; j <= 9; j++) {
 				if(j < 5) { // 1열부터 4열까지의 규칙
@@ -55,5 +74,6 @@ public class Problem12 {
 			}
 			System.out.println("");			
 		}
+		*/
 	}
 }

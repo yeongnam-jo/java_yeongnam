@@ -7,6 +7,11 @@ import java.util.Scanner;
 	     정수는 각각 입력받아도 상관없습니다.
 	     정수 4개를 입력하세요 : 89 4 222 6 
 	   89, 4, 222, 6 중 가장 큰수 : 222	
+	  
+	   답안 1
+	   int max01 = num > num2 ? num:num2;
+	   int max02 = num3 > num4 ? num3:num4;
+	   println("max : " + (max01>max02 ? max01:max02));	     	   
  */
 
 public class Problem02 {

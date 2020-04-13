@@ -1,6 +1,6 @@
 package kr.ac.yeongnam.day03;
 
-public class LoopMain06 {
+public class LoopMain03_06 {
 	/*
 	 	*
 	 	**

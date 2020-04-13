@@ -18,6 +18,9 @@ public class Problem09 {
 
 	public static void main(String[] args) {
 
+				
+		// 교수님 답안과 비슷
+		// else 구문 안에 for 문으로 대체할 수 있음. 프린트문이 반복되므로...
 		for (int dan = 2; dan <= 9;) {			
 			for(int num = 1; num <= 9; num++) {
 				if(dan == 8) { // 8단 (9단 이상은 나오지 않도록 구성)
@@ -28,7 +31,7 @@ public class Problem09 {
 					System.out.printf("%d * %d = %d\n", dan+2, num, (dan+2) * num);					
 				}
 			}	
-			System.out.println("");
+			System.out.println(""); // System.out.println(); 으로 해도 됨
 			dan += 3;
 		}
 		
