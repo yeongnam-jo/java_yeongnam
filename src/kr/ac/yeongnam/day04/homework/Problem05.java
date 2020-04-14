@@ -1,5 +1,12 @@
 package kr.ac.yeongnam.day04.homework;
 
+/*
+ 	5. 2 ~ 100사이의 소수를 출력하는 코드를 작성 
+ 	
+ 	< 2 ~ 100사이의 소수 출력 > 
+ 	2  3  5  7  11 13  17 … 97 
+ */
+
 public class Problem05 {
 
 	public static void main(String[] args) {
