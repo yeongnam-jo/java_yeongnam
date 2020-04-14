@@ -2,7 +2,7 @@ package kr.ac.yeongnam.day04.homework;
 
 import java.util.Scanner;
 
-public class Problem03미완료 {
+public class Problem03 {
 
 	public static void main(String[] args) {
 
@@ -26,8 +26,7 @@ public class Problem03미완료 {
 					System.out.print((i+1) + "번째 정수 : ");
 					intArr[i] = sc.nextInt();								
 				}				
-			}
-			
+			}			
 		}
 		
 		System.out.println();
@@ -36,23 +35,35 @@ public class Problem03미완료 {
 			System.out.print(num + " ");
 		}
 		
-		//REVERS 풀어야함.
-		// 15 
-		int [] reverseArr = new int [intArr.length];
-		
+		//REVERS
+		int [] reverseArr = new int [intArr.length];		
 		for(int i = (intArr.length - 1); i >= 0; i--){
-			//int tmp = intArr[i];
+			int tmp = intArr[i];
+			int reverseInt = 0;
+			int count = 0;
 			
-			//for(int j = 1; )
-			//intArr[i]
+			if(tmp % 10 == 0) {
+				tmp /= 10;
+			}
 			
-			//int digit = 0;
+			// System.out.println("tmp ==> " + tmp); // debug
 			
+			while((tmp % 10) != 0) {
+				reverseInt = reverseInt * 10;
+				reverseInt = reverseInt + (tmp % 10);
+				tmp /= 10;
+				count++;
+			}			
+			reverseArr[4-i] = reverseInt;
 			
-									
-			
+			// System.out.println(); // debug
+			// System.out.println("reverseArr[4-" + i + "]" + reverseInt); // debug
 		}
 		
+		System.out.println();
+		System.out.println("< REVERSE >");
+		for(int num : reverseArr) {
+			System.out.print(num + " ");
+		}		
 	}
-
 }
