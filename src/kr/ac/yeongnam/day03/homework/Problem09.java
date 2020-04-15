@@ -23,8 +23,9 @@ public class Problem09 {
 		// else 구문 안에 for 문으로 대체할 수 있음. 프린트문이 반복되므로...
 		for (int dan = 2; dan <= 9;) {			
 			for(int num = 1; num <= 9; num++) {
-				if(dan == 8) { // 8단 (9단 이상은 나오지 않도록 구성)
-					System.out.printf("%d * %d = %d\n", dan, num, dan * num);					
+				if(dan == 8) { // 8단, 9단 (10단 이상은 나오지 않도록 구성)
+					System.out.printf("%d * %d = %d\t", dan, num, dan * num);
+					System.out.printf("%d * %d = %d\n", dan+1, num, (dan+1) * num);
 				} else { // 2단부터 7단
 					System.out.printf("%d * %d = %d\t", dan, num, dan * num);	
 					System.out.printf("%d * %d = %d\t", dan+1, num, (dan+1) * num);				
