@@ -31,6 +31,16 @@ public class MethodMain01 {
 		System.out.println("");
 	}
 	
+	static int factorial(int n) {
+		int result = 1;
+		for(int i = n; i >= 1; i--) {
+			result = result * i ;			
+		}
+		
+		return result;
+	}
+	
+	
 	static void printStar2(char c, int cnt) {
 		for(int i = 0; i < cnt; i++) {
 			System.out.print(c);
@@ -40,6 +50,10 @@ public class MethodMain01 {
 	
 		
 	public static void main(String[] args) {
+		int result = factorial(3);
+		System.out.println(result);
+		
+		
 		int i = 100;
 		System.out.println(i);
 		System.out.println("============");
