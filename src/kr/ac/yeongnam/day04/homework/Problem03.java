@@ -1,5 +1,6 @@
 package kr.ac.yeongnam.day04.homework;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -27,6 +28,57 @@ public class Problem03 {
 
 	public static void main(String[] args) {
 
+		Scanner sc = new Scanner(System.in);
+		int[] intArr = new int[5]; // 정수형 배열 선언
+		
+		for(int i = 1; i <= 5; i++) {
+			System.out.print(i + "번째 정수 : ");
+			intArr[i-1] = Integer.parseInt(sc.nextLine());
+			
+			if(i >= 2 && intArr[i-1] <= intArr[i-2]) { // 이전보다 작은 수를 입력했을 때
+				int[] tmpArr = new int[i-1]; // 임시 배열
+				System.arraycopy(intArr, 0, tmpArr, 0, i-1); // 이전 배열의 값을 'deep copy'하고 출력한다.
+				System.out.println(Arrays.toString(tmpArr).replace("[", "").replace("]", "") // brackets 제거
+						+ "보다 큰 수가 와야 합니다.");
+				i--; // 조건을 만족하지 못했을 때, 다시 입력받기 위한 조치
+			}
+		}
+		
+		
+		// < PRINT >
+		System.out.println();
+		System.out.println("< PRINT >");
+		for(int num : intArr) {
+			System.out.print(num + " ");
+		}
+		
+		// < REVERSE >
+		int [] reverseArr = new int [intArr.length];		
+		for(int i = (intArr.length - 1); i >= 0; i--){
+			int tmp = intArr[i]; // 배열의 요소를 받는 임시 변수
+			int reverseInt = 0; // 반전된 정수를 담는 변수
+			
+			while(tmp % 10 == 0) { // 0으로 끝나는 정수라면, 0을 제거한다.
+				tmp /= 10;
+			}		
+			
+			while((tmp % 10) != 0) { // 반전된 정수를 reverseInt 변수에 담는다.
+				reverseInt = reverseInt * 10;
+				reverseInt = reverseInt + (tmp % 10);
+				tmp /= 10;
+			}			
+			reverseArr[4-i] = reverseInt;
+		}
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("< REVERSE >");
+		for(int num : reverseArr) {
+			System.out.print(num + " ");
+		}				
+		
+		
+		/*
 		Scanner sc = new Scanner(System.in);
 		
 		int[] intArr = new int[5]; 
@@ -85,6 +137,7 @@ public class Problem03 {
 		System.out.println("< REVERSE >");
 		for(int num : reverseArr) {
 			System.out.print(num + " ");
-		}		
+		}
+		*/		
 	}
 }

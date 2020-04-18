@@ -18,6 +18,19 @@ public class Problem05 {
 		}
 		
 		// 배열을 돌면서 소수인지 판별한다.
+		for(int i = 0; i < intArr.length; i++) {
+			if(intArr[i] != 0) { // 소수라면,
+				for(int j = i+1; j < intArr.length; j++) {
+					if(intArr[j] % intArr[i] == 0) { // 소수의 배수를 모두 0으로 초기화 한다.
+						intArr[j] = 0;
+					}
+				}
+			}
+		}		
+		
+		
+		/*
+		// 배열을 돌면서 소수인지 판별한다.
 		for(int num : intArr) {
 			int count = 0;
 			for(int i = 1; i <= num; i++) {
@@ -39,6 +52,7 @@ public class Problem05 {
 				}			
 			}
 		}
+		*/
 				
 		System.out.println("< 2 ~ 100 사이의 소수 출력 >");
 		for(int i = 0; i < intArr.length; i++) {
