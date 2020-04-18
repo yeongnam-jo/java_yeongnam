@@ -42,7 +42,8 @@ public class StringMain01 {
 		System.out.println("=======");
 		System.out.println(chars[0]);
 		System.out.println("chars : " + Arrays.toString(chars));
-		System.out.println(chars[1]); // 안나옵니다. 에러도 안나네.
+		//System.out.println(chars[1]); // 안나옵니다. 에러도 안나네.
+		System.out.println("=");
 		System.out.println(chars);
 		
 		
