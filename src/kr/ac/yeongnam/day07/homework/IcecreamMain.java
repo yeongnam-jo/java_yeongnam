@@ -1,6 +1,5 @@
-package kr.ac.yeongnam.day06.homework;
+package kr.ac.yeongnam.day07.homework;
 
-import java.util.Scanner;
 
 public class IcecreamMain {
 
@@ -8,7 +7,6 @@ public class IcecreamMain {
 
 		IcecreamMarket market = new IcecreamMarket();
 		market.buy();
-		market.print();
 			
 		
 		/* 이전 코드

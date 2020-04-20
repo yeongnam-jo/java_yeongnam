@@ -1,9 +1,9 @@
-package kr.ac.yeongnam.day06.homework;
+package kr.ac.yeongnam.day07.homework;
 
 public class Icecream {
 	
-	String name;
-	int price;
+	private String name;
+	private int price;
 	
 	Icecream(String name, int price){
 		this.name = name;

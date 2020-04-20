@@ -20,22 +20,22 @@ public class StringMain03 {
 		c = 'p';
 		System.out.println(str.indexOf(c));
 		
-		// l 인덱스를 모두 반환해보자 => 아래 코드 안되는데? 다시해보자.
-		str = "hello world";
+		// l 인덱스를 모두 반환해보자
+		str = "helLo world";
 		String searchStr = "l";
 		System.out.println("< " + str + "에서\"" + searchStr + "\" 위치 >");
 		int searchIdx = str.indexOf(searchStr);
 		while(searchIdx != -1) {
 			System.out.println("검색된 위치: " + searchIdx);
-			searchIdx = str.indexOf(searchStr + searchIdx+1);
+			searchIdx = str.indexOf(searchStr, searchIdx+1);
 		}
+			
 		
 		// l 인덱스를 모두 반환해보자
 		System.out.println("< " + str + "에서\"" + searchStr + "\" 위치 >");
 		searchIdx = -1;
 		while((searchIdx = str.indexOf(searchStr, searchIdx+1)) != -1) {
-			System.out.println("검색된 위치: " + searchIdx);
-			
+			System.out.println("검색된 위치: " + searchIdx);			
 		}
 		
 		// substring
