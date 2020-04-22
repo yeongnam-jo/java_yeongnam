@@ -24,7 +24,7 @@ public class StringRemove {
 	 * @param c
 	 * @return
 	 */
-	public String removeChar(String strData, char c) {		
+	public static String removeChar(String strData, char c) {		
 		String newStr = strData.replace(String.valueOf(c), "");
 		
 		print(newStr, c);
@@ -36,7 +36,7 @@ public class StringRemove {
 	 * @param result
 	 * @param c
 	 */	
-	public void print(String result, char c) {
+	public static void print(String result, char c) {
 		System.out.println("delChar = \'" + c + "\' 인 경우 => " + result + " 리턴");
 		
 	}
