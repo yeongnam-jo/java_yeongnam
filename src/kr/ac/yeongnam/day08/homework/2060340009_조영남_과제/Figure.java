@@ -3,7 +3,7 @@ package kr.ac.yeongnam.day08.homework;
 import java.util.Random;
 
 /**
- * 도형의 면적을 구하는 Util 클래스(공통적인 부분이 적은 것 같아 상속 개념은 사용하지 않았습니다.)
+ * 도형의 면적을 구하는 Util 클래스
  * @author socra
  *
  */
