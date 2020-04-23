@@ -16,6 +16,21 @@ public class Menu {
 		int type = sc.nextInt();
 		sc.nextLine();
 		
+		//Step 3
+		Printer p = null;
+		if(type == 1) {
+			p = new LGPrinter();			
+			
+		} else if(type == 2) {
+			p = new SamsungPrinter();
+			
+		} else if(type == 3){
+			p = new HPPrinter();			
+		}
+		p.print();
+		
+		/*
+		 * Step 2
 		if(type == 1) {
 			Printer lg = new LGPrinter();
 			// lg.lgPrint();
@@ -31,8 +46,10 @@ public class Menu {
 			HPPrinter hp = new HPPrinter();
 			hp.print();
 		}
+		*/
 		
 		/*
+		 * Step 1
 		if(type == 1) {
 			LGPrinter lg = new LGPrinter();
 			lg.lgPrint();
