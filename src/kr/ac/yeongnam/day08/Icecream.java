@@ -6,6 +6,13 @@ public class Icecream {
 	private int price;
 	
 	
+	@Override
+	public String toString() {
+		
+		return "아이스크림명 : " + name + ", 가격: " + price;
+	}
+
+
 	/**
 	 * name, price의 값으로 초기화하는 생성자
 	 * @param name 설정할 아이스크림명
