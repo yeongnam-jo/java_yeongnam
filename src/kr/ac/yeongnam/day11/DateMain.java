@@ -1,5 +1,6 @@
 package kr.ac.yeongnam.day11;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -14,12 +15,12 @@ public class DateMain {
 		
 		// 오늘은 2020년 04월 27일입니다.
 		Date d = new Date();
-		
+				
 		System.out.println("d : " + d);
 		System.out.println("==========================");
 		
 		int year = d.getYear() + 1900;
-		int month = d.getMonth();		
+		int month = d.getMonth() + 1;		
 		
 		System.out.println("year : " + year);
 		System.out.println("month : " + month);
@@ -50,8 +51,8 @@ public class DateMain {
 		System.out.println("day : " + dayArr[day]);
 		
 		System.out.println("==================");
-		d = c.getTime();
-		System.out.println(d);
+		d = c.getTime();		
+		System.out.println("d : " + d);
 		System.out.println("c : " + c);
 		
 		d = new Date();
@@ -62,6 +63,17 @@ public class DateMain {
 		month = c.get(Calendar.MONTH) + 1;
 		int lastDay = c.getActualMaximum(Calendar.DAY_OF_MONTH);
 		System.out.println(month + "월의 마지막 날은 " + lastDay + "일입니다.");
+		
+		// simpleDateFormat
+		System.out.println("====simpleDateFormat=====");
+		String pattern = "오늘은 yyyy년 MM월 dd일(E)입니다."; //M: 월   m: 분
+		String pattern2 = "yyyy-MM-dd hh:mm:ss(E)";
+		
+		SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+		SimpleDateFormat sdf2 = new SimpleDateFormat(pattern2);
+		System.out.println(sdf.format(new Date()));
+		System.out.println(sdf2.format(new Date()));
+		
 		
 	}
 }
