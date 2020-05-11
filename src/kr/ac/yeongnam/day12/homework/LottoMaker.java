@@ -26,20 +26,19 @@ public class LottoMaker {
 				break;
 			case 4:
 				algo4(gameNum);
-				break;
-		
+				break;		
 		}	
 		
 	}
 	
+	// for 반복문을 이용한 중복 제거
 	public void algo1(int gameNum) {
 		System.out.println("algo1");
 		Random r = new Random();
 		
 		for(int cnt = 1; cnt <= gameNum; cnt++) {
 			
-			int[] list = new int[7];
-			
+			int[] list = new int[7];			
 			for(int i = 0; i < 7; i++) {
 				int randomNum = r.nextInt(45) + 1;
 				list[i] = randomNum;
@@ -64,6 +63,7 @@ public class LottoMaker {
 	}
 	
 
+	// ArrayList를 이용한 중복 제거
 	public void algo2(int gameNum) {
 		System.out.println("algo2");
 		Random r = new Random();
@@ -87,6 +87,7 @@ public class LottoMaker {
 		
 	}
 	
+	// Set을 이용한 중복 제거
 	public void algo3(int gameNum) {
 		System.out.println("algo3");
 		Random r = new Random();
@@ -106,6 +107,7 @@ public class LottoMaker {
 		}
 	}
 	
+	// Map을 이용한 중복 제거
 	public void algo4(int gameNum) {
 		System.out.println("algo4");
 		Random r = new Random();
@@ -130,8 +132,7 @@ public class LottoMaker {
 			System.out.println();				
 		}
 		
-	}
-	
+	}	
 	
 	private static void shuffleArray(int[] array){
 	    int index;

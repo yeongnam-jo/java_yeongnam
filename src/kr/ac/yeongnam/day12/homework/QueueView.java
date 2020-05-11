@@ -7,28 +7,32 @@ import java.util.Scanner;
 public class QueueView {
 
 	private Scanner sc;
+	private List<String> queue;
 	
 	QueueView(){
-		List<String> queue = new ArrayList<>();
+		queue = new ArrayList<>();
 	}
 	
 	public void start() {
+		int num = 0;
 		
-		int num = select();
-		switch(num) {
-		case 1:
-			add();
-			break;
-		case 2:
-			remove();
-			break;
-		case 3:
-			printAll();
-			break;
-		case 4:
-			System.out.println("종료합니다.");
-		}
-		
+		while(num != 4) {
+			
+			num = select();
+			switch(num) {
+			case 1:
+				push();
+				break;
+			case 2:
+				pop();
+				break;
+			case 3:
+				printAll();
+				break;
+			case 4:
+				System.out.println("종료합니다.");
+			}
+		}		
 	}
 	
 	public int select() {
@@ -46,13 +50,21 @@ public class QueueView {
 		return num;
 	}
 	
-	public void add() {
-		
+	public void push() {
+		System.out.print("데이터를 입력해주세요 : ");
+		String input = sc.nextLine();
+		queue.add(input);		
 	}
-	public void remove() {
-		
+	
+	public void pop() {
+		System.out.println("데이터를 삭제합니다.");
+		System.out.println("삭제된 데이터 : " + queue.remove(0));
 	}
 	public void printAll() {
-		
+		System.out.println("전체 데이터를 출력합니다.");
+		for(String str : queue) {
+			System.out.println(str + " ");
+		}		
+		System.out.println();
 	}
 }

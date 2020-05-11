@@ -4,8 +4,7 @@ public class LottoMain {
 	
 	public static void main(String[] args) {
 		LottoView lv = new LottoView();
-		lv.gameStart();
-		
+		lv.gameStart();		
 	}
 
 }

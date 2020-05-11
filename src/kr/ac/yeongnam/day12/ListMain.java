@@ -58,11 +58,14 @@ public class ListMain {
 		}
 		
 		System.out.println("2번지에 위치한 데이터 : " + list.get(2));
-		System.out.println("삭제된 데이터 : " + list.remove(2)); // index 입력하면 String 반환
+		System.out.println("2번지에 삭제된 데이터 : " + list.remove(2)); // index 입력하면 String 반환
 		System.out.println("2번지에 위치한 데이터 : " + list.get(2));
 	
-		System.out.println("1 데이터 삭제 : " + list.remove("1"));
-		System.out.println("1 데이터 삭제 : " + list.remove("1"));
+		System.out.println("1번지에 위치한 데이터 : " + list.get(1));
+		System.out.println("1 이라는 데이터 삭제 : " + list.remove("1"));
+		System.out.println("1번지에 위치한 데이터 : " + list.get(1));
+		System.out.println("1 이라는 데이터 삭제 : " + list.remove("1"));
+		System.out.println("1번지에 위치한 데이터 : " + list.get(1));
 	
 		
 		System.out.println("1 데이터 존재여부 : " + list.contains("1"));

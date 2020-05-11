@@ -24,9 +24,6 @@ public class LottoView {
 		lm = new LottoMaker();
 		lm.maker(algoNum, gameNum);
 		
-		// System.out.println("game:" + gameNum + " algo : " + algoNum);
-		
-		
 	}
 
 }
