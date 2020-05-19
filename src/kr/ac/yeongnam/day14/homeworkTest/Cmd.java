@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Cmd {
-	
+
 	private String nowDir = "iotest";
 	private Scanner sc;
 	private String option;
@@ -17,21 +17,21 @@ public class Cmd {
 		showList();
 		option = showOption();
 	
-		if(option.equals("c") || option.equals("C")) {			
+		while(!option.equals("q") || !option.equals("Q")) {
 			
-		} else if(option == "r" || option == "R"){
-			
-		} else if(option == "d" || option == "D"){
-			
-		} else if(option == ".") {
-			
-		} else if(option == "m" || option == "M") {
-			
-		} else if(option == "q" || option == "Q") {
-			
-		} else {
-			System.out.println("잘못 입력하셨습니다.");
-			
+			if(option.equals("c") || option.equals("C")) {			
+				
+			} else if(option.equals("r") || option.equals("R")){
+				
+			} else if(option.equals("d") || option.equals("D")){
+				
+			} else if(option.equals(".")) {
+				
+			} else if(option.equals("m") || option.equals("M")) {
+				
+			} else {
+				System.out.println("잘못 입력하셨습니다.");			
+			}
 		}
 		
 		/*
