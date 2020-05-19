@@ -45,6 +45,8 @@ public class MemberMain02 {
 						System.out.println("name: " + list.get(j).getName() + ", password: " + list.get(j).getPassword());
 					}
 					*/
+					Iterator<Member> ite2
+					
 					
 					Iterator<Member> ite = list.iterator();
 					while(ite.hasNext()) {

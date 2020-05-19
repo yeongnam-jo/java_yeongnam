@@ -64,6 +64,15 @@ public class MapMain {
 		
 		System.out.println("++++++++++++++++++++");
 		Set<Entry<String, String>> entry = map.entrySet();
+		/*
+		 * Map에 값을 전체 출력하기 위해서는 entrySet(), keySet() 메소드를 사용하면 되는데 
+		 * entrySet() 메서드는 key와 value의 값이 모두 필요한 경우 사용하고, 
+		 * keySet() 메서드는 key의 값만 필요한 경우 사용합니다.
+		 * 
+		 * Iterator 인터페이스를 사용할 수 없는 컬렉션인 Map에서 Iterator 인터페이스를 사용하기 위해서는 
+		 * Map에 entrySet(), keySet() 메소드를 사용하여 Set 객체를 반환받은 후 
+		 * Iterator 인터페이스를 사용하시면 됩니다.
+		 */
 		Iterator<Entry<String, String>> ite = entry.iterator(); 
 		while(ite.hasNext()) {
 			Entry<String, String> e = ite.next();
