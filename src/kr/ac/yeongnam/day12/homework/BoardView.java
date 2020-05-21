@@ -10,7 +10,8 @@ public class BoardView {
 	String title;
 	String writer;
 	
-	private Board boardArr[] = new Board[100];
+	// private Board boardArr[] = new Board[100];
+	private Board[] boardArr = new Board[100];
 	
 	BoardView(){
 		sc = new Scanner(System.in);

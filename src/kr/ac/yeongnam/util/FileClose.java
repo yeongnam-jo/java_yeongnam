@@ -1,11 +1,16 @@
 package kr.ac.yeongnam.util;
 
+/*
+ 	jar 파일로 묶어서 다른 프로젝트에 넣어서 활용해도 됨.
+ */
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.Reader;
 import java.io.Writer;
+
 
 public class FileClose {
 
