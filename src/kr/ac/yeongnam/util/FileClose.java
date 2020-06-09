@@ -1,19 +1,45 @@
 package kr.ac.yeongnam.util;
 
-/*
- 	jar 파일로 묶어서 다른 프로젝트에 넣어서 활용해도 됨.
- */
-
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Reader;
 import java.io.Writer;
 
-
 public class FileClose {
 
+	
+	public static void close(InputStream is) {
+		if(is != null) {
+			try {
+				is.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void close(OutputStream osw) {
+		if(osw != null) {
+			try {
+				osw.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public static void close(BufferedWriter bw) {
+		if(bw != null) {
+			try {
+				bw.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	
 	public static void close(Writer w) {
 		if(w != null) {
 			try {
@@ -23,6 +49,8 @@ public class FileClose {
 			}
 		}
 	}
+	
+	
 	
 	public static void close(Reader r) {
 		if(r != null) {
@@ -48,5 +76,12 @@ public class FileClose {
 		close(r);
 		close(w);
 	}
-		
 }
+
+
+
+
+
+
+
+
