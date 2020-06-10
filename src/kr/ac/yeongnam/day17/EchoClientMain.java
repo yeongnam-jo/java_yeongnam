@@ -20,6 +20,7 @@ public class EchoClientMain {
 		
 		String serverIp = args[0];
 		int port = Integer.parseInt(args[1]);
+
 		
 		try {
 			Socket socket = new Socket(serverIp, port);

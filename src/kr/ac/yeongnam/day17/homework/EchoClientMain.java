@@ -10,16 +10,9 @@ import java.net.Socket;
 
 public class EchoClientMain {
 	public static void main(String[] args) {
-		if(args.length != 2) {
-			System.out.println("=============================================");
-			System.out.println("  사용법이 잘못됐습니다. ");
-			System.out.println("  사용법 : java EchoClientMain  서버IP  접속PORT");
-			System.out.println("=============================================");
-			System.exit(0);
-		}
 		
-		String serverIp = args[0];
-		int port = Integer.parseInt(args[1]);
+		String serverIp = "172.16.88.139";
+		int port = 10000;
 		
 		try {
 			Socket socket = new Socket(serverIp, port);

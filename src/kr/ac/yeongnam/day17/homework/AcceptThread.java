@@ -14,10 +14,6 @@ public class AcceptThread extends Thread {
 	
 	private ServerSocket socket;
 	
-	AcceptThread(){
-		
-	}
-	
 	AcceptThread(ServerSocket socket){
 		this.socket = socket;
 	}
@@ -29,12 +25,12 @@ public class AcceptThread extends Thread {
 		try {
 			client = socket.accept();
 			System.out.println("[" + client.getInetAddress() + "]님이 접속했습니다.");
-
+			
 			// 클라이언트가 전송해준 메세지를 수신할 객체 필요
 			InputStream is = client.getInputStream(); // 바이트 스트림
 			InputStreamReader isr = new InputStreamReader(is); // 문자 스트림
 			BufferedReader br = new BufferedReader(isr); // 속도를 빠르게 하기 위해서
-
+			
 			// 수신한 메세지를 클라이언트에게 재전송 할 객체 필요
 			OutputStream os = client.getOutputStream();
 			OutputStreamWriter ow = new OutputStreamWriter(os);
@@ -52,23 +48,10 @@ public class AcceptThread extends Thread {
 				pw.println(msg);
 				pw.flush();
 			}
-		} catch (IOException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
-		/*		
-		ReceiveThread rt = new ReceiveThread();
-		rt.setSocket(client);
-		
-		SendThread st = new SendThread();
-		st.setSocket(client);
-		
-		rt.start();
-		st.start();
-		*/
-		
-		
 	}
 
-	
 }
